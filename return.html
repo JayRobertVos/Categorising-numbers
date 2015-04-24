@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}{{category}}?{% endblock %}
+
+{% block page_content %}
+<div class="container-narrow" align="center">
+
+      <div class="masthead">
+        <ul class="nav nav-pills nav-justified">
+          <li class="active"><a href="/">Home</a></li>
+        </ul>
+      </div>
+    </div>
+<div class="container-narrow" align="center">
+    <h1>{{number}}</h1>
+    <h2>Prime  :  {{prime}}</br>Mersenne prime : {{mersenne_prime}}</br>Divisors : {{divisors}}</br>Prime factorisation : 
+
+{{prime_factorisation}}</br>Happy : {{happy}}</br>Perfect : {{perfect}}</br>Narcissistic : {{narcissistic}}</br>Binary : {{binary}}
+
+</br>Triangle : {{triangle}}</br>Fibonacci : {{fibonacci}}</br>
+</div>
+{% endblock %}
