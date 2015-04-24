@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block title %}Categorising Numbers{% endblock %}
+
+{% block page_content %}
+<div>
+    <div class="masthead">
+        <ul class="nav nav-pills nav-justified">
+          <li class="active"><a href="/">Home</a></li>
+        </ul>
+    </div>
+        <h1> Categorising Numbers </h1>
+            <form action="/categorise" method="POST">
+                <label>Input a number</label>
+                <input type="number" name="number" />
+                <br/>
+                    <legend>Now choose a category</legend>
+                    
+                    <input type="checkbox" name="b" value="binary" /> Binary <br/>
+                    <input type="checkbox" name="d" value="divisors" /> Divisors <br/>
+                    <input type="checkbox" name="f" value="fibonacci" /> Fibonacci <br/>
+                    <input type="checkbox" name="h" value="happy" /> Happy <br/>
+                    <input type="checkbox" name="m" value="mersenne_prime" /> Mersenne Prime <br/>
+                    <input type="checkbox" name="n" value="narcissistic" /> Narcissistic <br/>
+                    <input type="checkbox" name="p" value="perfect" /> Perfect <br/>
+                    <input type="checkbox" name="pr" value="prime" /> Prime <br/>
+                    <input type="checkbox" name="prf" value="prime_factorisation" /> Prime Factorisation <br/>
+                    <input type="checkbox" name="t" value="triangle" /> Triangle <br/>
+                    </br>
+                <input type="Submit" value="Categorise" />                
+            </form>
+</br>
+<h6>It is recommended that the number not exceed 10^15 as the</br>
+process will take in excess of 30 seconds and the number must </br>
+also be positive.</h6>
+
+</div>
+{% endblock %}
